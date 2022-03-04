@@ -96,6 +96,11 @@ const downloadImage = (url, destination) =>
       return all;
     });
 
+    const dir = path.resolve(__dirname, 'assets');
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(path.resolve(__dirname, dir));
+    }
+
     const data = all.map(({ image, answers }) => {
       const id = v4();
       downloadImage(image, `${id}.jpg`);
@@ -105,11 +110,6 @@ const downloadImage = (url, destination) =>
         answers,
       };
     });
-
-    const dir = path.resolve(__dirname, 'assets');
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(path.resolve(__dirname, dir));
-    }
 
     fs.writeFileSync(
       path.resolve(dir, 'questions.json'),
