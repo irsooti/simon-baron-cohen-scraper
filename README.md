@@ -18,3 +18,14 @@ Which word best describes what the person in the picture is thinking and feeling
 ## Understand of the score
 
 The average score for this test is in the range of 22 to 30 correct responses. If you scored above 30, you may be quite good at understanding someone's mental state based on facial cues. If you scored below 22, you may find it difficult to understand a person's mental state based on their facial expressions.
+
+
+## How to use the JSON?
+
+Images are placed in `images` folder. Each id in the json corresponds to a jpg images:
+
+```
+/images/<uuid>.jpg
+```
+
+That's it!
