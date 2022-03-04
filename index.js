@@ -106,8 +106,13 @@ const downloadImage = (url, destination) =>
       };
     });
 
+    const dir = path.resolve(__dirname, 'assets');
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(path.resolve(__dirname, dir));
+    }
+
     fs.writeFileSync(
-      path.resolve(__dirname, 'assets', 'questions.json'),
+      path.resolve(dir, 'questions.json'),
       JSON.stringify(data, null, 4),
       { encoding: 'utf-8' }
     );
