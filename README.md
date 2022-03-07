@@ -22,7 +22,7 @@ The average score for this test is in the range of 22 to 30 correct responses. I
 
 ## How to use the JSON?
 
-Images are placed in `images` folder. Each id in the json corresponds to a jpg images:
+Images are placed in `images` folder. Each id in the json corresponds to a jpg image:
 
 ```
 /images/<uuid>.jpg
